@@ -11,12 +11,25 @@ def _format_addr(s):
     name, addr = parseaddr(s)
     return formataddr((Header(name, 'utf-8').encode(), addr))
 
-from_addr = input('From: ')
-password = input('Password: ')
-to_addr = input('To: ')
-smtp_server = input('SMTP server: ')
+# from_addr = input('From: ')
+from_addr = '654154811@qq.com'
 
-msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
+# password = input('Password: ')
+password = 'eevlbyhsqkffbgac'
+
+# to_addr = input('To: ')
+to_addr = 'yumingliang1995@163.com'
+
+# smtp_server = input('SMTP server: ')
+smtp_server = 'smtp.qq.com'
+
+# qq SMTP服务器 smtp.qq.com
+# qq POP3服务器 pop.qq.com
+msg = MIMEText('<html><body><h1>Hello</h1>' +
+    '<p>send by <a href="http://www.python.org">Python</a>...</p>' +
+    '</body></html>', 'html', 'utf-8')
+
+# msg = MIMEText('hello, send by Python...', 'plain', 'utf-8')
 msg['From'] = _format_addr('Python爱好者 <%s>' % from_addr)
 msg['To'] = _format_addr('管理员 <%s>' % to_addr)
 msg['Subject'] = Header('来自SMTP的问候……', 'utf-8').encode()
