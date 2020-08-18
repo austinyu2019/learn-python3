@@ -52,3 +52,10 @@ MANIFEST
 .mr.developer.cfg
 .project
 .pydevproject
+/venv/
+/.idea/.gitignore
+/.idea/misc.xml
+/.idea/modules.xml
+/.idea/vcs.xml
+/.idea/learn-python3.iml
+/.idea/inspectionProfiles/profiles_settings.xml
